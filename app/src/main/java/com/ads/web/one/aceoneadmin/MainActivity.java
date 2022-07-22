@@ -34,8 +34,6 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawerLayout);
         navigationView = findViewById(R.id.navigationView);
         toolbar = findViewById(R.id.toolbar);
-
-
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayShowHomeEnabled(true);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -79,25 +77,5 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction ft = fm.beginTransaction();
         ft.replace(R.id.container, fragment);
         ft.commit();
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        menu.add("Add Advertisement Link");
-        menu.add("Add Help Link");
-        menu.add("Add KYC Link");
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getTitle().equals("Add Advertisement Link")) {
-
-        } else if (item.getTitle().equals("Add Help Link")) {
-
-        } else if (item.getTitle().equals("Add KYC Link")) {
-
-        }
-        return super.onOptionsItemSelected(item);
     }
 }
